@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        tools:context=".ui.activity.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_choose_your_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_your_app"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_splitify"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            android:foreground="@drawable/default_ripple_corner"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cv_margh"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Splitify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/splitify"
+                android:padding="40dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_margh"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:foreground="@drawable/default_ripple_corner"
+            app:cardElevation="4dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/cv_splitify"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Margh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/margh"
+                android:padding="40dp" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

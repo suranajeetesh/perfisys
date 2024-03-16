@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/txt_inspirational_quote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:text="@string/may_your_evening_be_filled_with_tranquility"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_goneMarginTop="@dimen/dp_40"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_inspirational_button"
+                android:layout_width="wrap_content"
+                app:cornerRadius="@dimen/dp_4"
+                android:layout_height="wrap_content"
+                android:text="@string/inspirational"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_inspirational_quote" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_search"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_inspirational_button"
+                app:layout_constraintTop_toTopOf="@id/btn_inspirational_button"
+                app:layout_constraintBottom_toBottomOf="@id/btn_inspirational_button">
+
+            <EditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingEnd="@dimen/dp_32"
+                    android:paddingStart="@dimen/dp_8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:inputType="textAutoComplete"
+                    android:drawableStart="@drawable/baseline_search_24"
+                    app:layout_constraintEnd_toStartOf="@id/voice_button"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+            <ImageView
+                    android:id="@+id/voice_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_keyboard_voice_24"
+                    android:contentDescription="@string/voice_search"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/search_edit_text"
+                    app:layout_constraintBottom_toBottomOf="@id/search_edit_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_inspirational_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

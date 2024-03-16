@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/clickableFragment">
+
+        <ImageView
+                android:id="@+id/game"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                app:lottie_url="https://lottie.host/embed/5c792d72-80aa-4bb7-ba0d-baf51af9617b/fGD0arXcis.json"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                app:srcCompat="@drawable/ic_menu" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/monthly_expenses_tracker"
+                app:layout_constraintVertical_bias="0.1"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                android:textColor="#2477FF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cv_this_month"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/txt_cv_share_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="4dp"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/this_month"
+                        android:textSize="16sp" />
+
+                <TextView
+                        android:id="@+id/txt_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:layout_marginVertical="@dimen/dp_16"
+                        android:text="@string/_2128"
+                        android:textSize="24sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cv_contact"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginHorizontal="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cv_this_month"
+                app:layout_constraintBottom_toBottomOf="@id/cv_this_month"
+                app:layout_constraintStart_toEndOf="@+id/guideline">
+
+            <TextView
+                    android:id="@+id/txt_past_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginVertical="@dimen/dp_32"
+                    android:text="@string/past_prices"
+                    android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+                android:id="@+id/txt_spent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spent_by"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cv_contact" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_person_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                tools:listitem="@layout/item_person"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_spent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cv_show_expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:textAllCaps="true"
+                    android:layout_margin="@dimen/dp_8"
+                    android:text="@string/show_expenses"
+                    android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+                android:id="@+id/fab_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_24"
+                style="@style/fab_rounded"
+                app:backgroundTint="@color/white"
+                android:padding="@dimen/dp_16"
+                android:background="@drawable/ripple_oval"
+                android:elevation="@dimen/dp_4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"
+                app:layout_constraintGuide_percent=".5"
+                android:orientation="vertical" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
