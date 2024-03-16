@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">PERFISYS</string>
+    <string name="splitify">Splitify</string>
+    <string name="margh">Margh</string>
+    <string name="choose_your_app">Choose Your App</string>
+    <string name="monthly_expenses_tracker">Monthly expenses tracker</string>
+    <string name="may_your_evening_be_filled_with_tranquility">May your evening be filled with tranquility.</string>
+    <string name="inspirational">Inspirational</string>
+    <string name="search">Search</string>
+    <string name="voice_search">Voice Search</string>
+    <string name="profile">Profile</string>
+    <string name="save">Save</string>
+    <string name="home">Home</string>
+    <string name="work_in_progress">Work in progress</string>
+    <string name="jeetesh_surana">jeetesh surana</string>
+    <string name="share">Share</string>
+    <string name="contact_us">Contact us</string>
+    <string name="about_us">About us</string>
+    <string name="logout">LOGOUT</string>
+
+    <string name="expense_history">Expense History</string>
+    <string name="item">Item:</string>
+    <string name="name">name</string>
+    <string name="_00_00_0000">00-00-0000</string>
+    <string name="_00_00">00:00</string>
+    <string name="price">Price :</string>
+    <string name="paid_by">Paid by :</string>
+    <string name="show_expenses">Show Expenses</string>
+    <string name="spent_by">Spent By:</string>
+    <string name="this_month">This month</string>
+    <string name="_2128">2128</string>
+    <string name="past_prices">Past Prices</string>
+</resources>
