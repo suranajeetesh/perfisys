@@ -1,0 +1,39 @@
+<!-- item_category.xml -->
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_2">
+
+        <!-- ImageView for the category image -->
+        <ImageView
+                android:id="@+id/img_category"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- TextView for the category name -->
+        <TextView
+                android:id="@+id/txt_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/img_category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

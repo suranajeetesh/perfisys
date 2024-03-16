@@ -6,6 +6,7 @@
     <string name="monthly_expenses_tracker">Monthly expenses tracker</string>
     <string name="may_your_evening_be_filled_with_tranquility">May your evening be filled with tranquility.</string>
     <string name="inspirational">Inspirational</string>
+    <string name="random_quotes">Random quotes</string>
     <string name="search">Search</string>
     <string name="voice_search">Voice Search</string>
     <string name="profile">Profile</string>
@@ -30,4 +31,5 @@
     <string name="this_month">This month</string>
     <string name="_2128">2128</string>
     <string name="past_prices">Past Prices</string>
+    <string name="category">Category</string>
 </resources>

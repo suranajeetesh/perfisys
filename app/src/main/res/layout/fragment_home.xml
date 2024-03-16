@@ -12,9 +12,11 @@
                 android:id="@+id/txt_inspirational_quote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="46dp"
+                android:layout_marginTop="@dimen/dp_56"
+                android:layout_margin="@dimen/dp_16"
                 android:text="@string/may_your_evening_be_filled_with_tranquility"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_goneMarginTop="@dimen/dp_40"
@@ -25,16 +27,19 @@
                 android:layout_width="wrap_content"
                 app:cornerRadius="@dimen/dp_4"
                 android:layout_height="wrap_content"
-                android:text="@string/inspirational"
+                android:text="@string/random_quotes"
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="@dimen/dp_16"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txt_inspirational_quote" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_search"
                 android:layout_width="@dimen/dp_0"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_search"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginHorizontal="@dimen/dp_16"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/btn_inspirational_button"
@@ -42,11 +47,13 @@
                 app:layout_constraintBottom_toBottomOf="@id/btn_inspirational_button">
 
             <EditText
-                    android:id="@+id/search_edit_text"
+                    android:id="@+id/edt_search"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:paddingVertical="@dimen/dp_8"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:paddingVertical="@dimen/dp_2"
                     android:gravity="center_vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -56,19 +63,21 @@
                     app:layout_constraintTop_toTopOf="parent"
                     android:inputType="textAutoComplete"
                     android:drawableStart="@drawable/baseline_search_24"
-                    app:layout_constraintEnd_toStartOf="@id/voice_button"
+                    app:layout_constraintEnd_toStartOf="@id/img_voice"
                     tools:ignore="Autofill,LabelFor,TextFields" />
 
             <ImageView
-                    android:id="@+id/voice_button"
+                    android:id="@+id/img_voice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
                     android:src="@drawable/baseline_keyboard_voice_24"
                     android:contentDescription="@string/voice_search"
                     android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/search_edit_text"
-                    app:layout_constraintBottom_toBottomOf="@id/search_edit_text" />
+                    app:layout_constraintTop_toTopOf="@id/edt_search"
+                    app:layout_constraintBottom_toBottomOf="@id/edt_search" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
